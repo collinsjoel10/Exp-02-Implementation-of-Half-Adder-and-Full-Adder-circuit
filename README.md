@@ -29,52 +29,71 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 
 #### Figure -02 FULL ADDER 
 
-### Procedure
+### Procedure:
 
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
-### 
-Program:
-/*
+
+### Program:
+
+```
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+Developed by:  JOEL P
+RegisterNumber:212222230057
+```
 
+half adder:
+```
+module halfadder(a,b,s,c);
+input a,b;
+output s,c;
+xor (s,a,b);
+and (c,a,b);
+endmodule
+```
+
+full adder:
+```
+module fulladder(a,b,ci,s,co);
+input a,b,ci;
+output s,co;
+wire d,e,f;
+xor (d,a,b);
+xor (s,d,ci);
+and (f,a,b);
+or (co,e,f);
+endmodule
+```
+Logic symbol & Truthtable:
 ### Output:
-### RTL
-
+### RTL:
 half adder:
 
-![image](https://user-images.githubusercontent.com/118626456/232385122-70e5675a-2426-4dd7-9a35-27c79643d6dd.png)
+![half adder](https://user-images.githubusercontent.com/118707079/230267534-15bb609f-e040-4342-859d-72dbf4e7beab.png)
 
 full adder:
 
-![image](https://user-images.githubusercontent.com/118626456/232385772-65e3c671-2352-41aa-b1fe-9c1db2c7297e.png)
+![full adder](https://user-images.githubusercontent.com/118707079/230267605-2bacd3c2-06f1-49e6-b54c-62b1ea05394c.png)
 
-### TIMING DIAGRAM
-
+### TIMING DIAGRAM:
 half adder:
 
-![image](https://user-images.githubusercontent.com/118626456/232385880-4d388fcc-d374-45b2-aebf-d7437a75fe60.png)
+![half](https://user-images.githubusercontent.com/118707079/230267692-c39c206d-aab2-4d49-8434-064d36356d4a.png)
 
 full adder:
 
-![image](https://user-images.githubusercontent.com/118626456/232385919-26c02e2c-2a21-4e26-bf29-2c485ec54492.png)
+![full](https://user-images.githubusercontent.com/118707079/230267739-e1b8fdbf-e40a-47aa-9008-09189a2b5c50.png)
 
-### TRUTH TABLE 
-
+### TRUTH TABLE:
 half adder:
 
-![image](https://user-images.githubusercontent.com/118626456/232385982-ba0fe83d-473a-4c0a-882f-156c909351a6.png)
+![addhalf](https://user-images.githubusercontent.com/118707079/230267837-99507134-60e2-4f84-8848-c1c6a9f203f0.png)
 
 full adder:
 
-![image](https://user-images.githubusercontent.com/118626456/232386012-1b6b0c1e-12aa-440a-9183-921aae9ba54b.png)
+![addfull](https://user-images.githubusercontent.com/118707079/230267905-e7f2352f-78f3-491c-9de5-34cedad14519.png)
 
 ### Result:
 
-Thus the Implementation of Half Adder and Full Adder circuit are studied and the truth table for different logic gates are verified
+Thus the Implementation of Half Adder and Full Adder circuit are studied and the truth table for different logic gates are
